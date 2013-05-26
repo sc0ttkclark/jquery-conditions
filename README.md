@@ -1,7 +1,7 @@
 jQuery Conditions
 =================
 
-**jQuery Conditions** is a new project aiming at providing conditional rule based form fields that show/hide based on 
+**jQuery Conditions** is a new project aiming at providing conditional rule handling for form fields including show/hide/message/validation handling.
 
 # Roadmap
 
