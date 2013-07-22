@@ -1,7 +1,7 @@
 jQuery Conditions
 =================
 
-**jQuery Conditions** is a new project aiming at providing conditional rule handling for form fields including show/hide/message/validation handling.
+**jQuery Conditions** is a new project aiming at providing conditional rule handling for form fields including show/hide/message.
 
 # Roadmap
 
@@ -12,7 +12,6 @@ jQuery Conditions
     * Show this field
     * Hide this field
     * Show a message
-    * Show an error message (for validation, blocks form submit)
 * **What element selector to base logic off of**
 * **Comparison operator**
     * `=`
@@ -36,4 +35,3 @@ jQuery Conditions
     * *Value to check*
         * Single for `=` `!=` `>` `>=` `<` `<=` `LIKE` `NOT LIKE` `REGEX MATCH` `REGEX NEGATIVE MATCH`
         * Multiple values for `IN` `NOT IN` `BETWEEN` `NOT BETWEEN`
-* **PHP functions to output show/hide/validation CSS and messaging**
