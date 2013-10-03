@@ -74,7 +74,7 @@ class jQuery_Conditions {
 			$data = $_POST;
 		}
 
-		if ( isset( $conditions[ 'field' ] ) ) {
+		if ( isset( $conditions[ 'field' ] ) || isset( $conditions[ 'key' ] ) ) {
 			$conditions = array( $conditions );
 		}
 
@@ -87,10 +87,13 @@ class jQuery_Conditions {
 		$valid = true;
 
 		foreach ( $conditions as $field => $condition ) {
-			if ( is_array( $condition ) && !is_string( $field ) && !isset( $condition[ 'field' ] ) ) {
+			if ( is_array( $condition ) && !is_string( $field ) && !isset( $condition[ 'field' ] ) && !isset( $condition[ 'key' ] ) ) {
 				$condition_valid = self::conditions( $condition, $data );
 			}
 			else {
+				$field = self::v( 'key', $condition, $field, true );
+				$field = self::v( 'field', $condition, $field, true );
+
 				$value = self::v( $field, $data );
 
 				$condition_valid = self::condition( $condition, $value, $field, $data );
